@@ -1,1 +1,6 @@
-tp5
+tp5/bin
+tp5/include
+tp5/lib
+tp5/include64
+tp5/pyvenv.cfg
+tp5/share
