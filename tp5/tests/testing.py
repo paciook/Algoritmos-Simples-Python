@@ -13,3 +13,28 @@ import src.vocales as vocales  # noqa
 class TestAgenda(unittest.TestCase):
     def test_agenda(self):
         pass
+
+
+class TestCapitalizada(unittest.TestCase):
+    def test_capitalizada(self):
+        pass
+
+
+class TestContraseña(unittest.TestCase):
+    def test_contraseña(self):
+        pass
+
+
+class TestDevolucionDeLetras(unittest.TestCase):
+    def test_devolucion_de_letras(self):
+        pass
+
+
+class TestPunto2(unittest.TestCase):
+    def test_punto_2(self):
+        pass
+
+
+class TestVocales(unittest.TestCase):
+    def test_vocales(self):
+        pass
