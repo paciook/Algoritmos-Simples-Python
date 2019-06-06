@@ -16,16 +16,16 @@ class TestAgenda(unittest.TestCase):
         pass
 
 
-
 class TestCapitalizada(unittest.TestCase):
     def test_capitalizada(self):
         respuesta = ["USB", "Universal Serial Bus", ""]
-        self.assertEqual(capitalizada.ejercicios("universal serial bus"), respuesta)
-        self.assertEqual(capitalizada.ejercicios("UNIVERSAL SERIAL BUS"), respuesta)
+        self.assertEqual(capitalizada.ejercicios("universal\
+                                                  serial bus"), respuesta)
+        self.assertEqual(capitalizada.ejercicios("UNIVERSAL\
+                                                  SERIAL BUS"), respuesta)
 
         # bitguarden
         # syncthing
-
 
 
 class TestContraseña(unittest.TestCase):
@@ -37,7 +37,8 @@ class TestContraseña(unittest.TestCase):
 
 class TestDevolucionDeLetras(unittest.TestCase):
     def test_devolucion_de_letras(self):
-        self.assertEqual(devolucion_de_letras.consonantes("algoritmos"), "lgrtms")
+        self.assertEqual(devolucion_de_letras.consonantes("algoritmos"),
+                         "lgrtms")
         self.assertEqual(devolucion_de_letras.vocales("algoritmos"), "aoio")
 
 
@@ -53,7 +54,8 @@ class TestPunto2(unittest.TestCase):
 class TestVocales(unittest.TestCase):
     def test_vocales(self):
         cantVocales = [1, 2, 3, 4, 5]
-        self.assertEqual(vocales.devuelveVocales("aeeIIiooooUuUuU"), cantVocales)
+        self.assertEqual(vocales.devuelveVocales("aeeIIiooooUuUuU"),
+                         cantVocales)
         cantVocales = [2, 3, 1, 3, 1]
         self.assertEqual(vocales.devuelveVocales("aeaeieouoo"), cantVocales)
         pass
@@ -61,4 +63,3 @@ class TestVocales(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
