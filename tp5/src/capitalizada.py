@@ -1,0 +1,2 @@
+def ejercicios(frase):
+    pass

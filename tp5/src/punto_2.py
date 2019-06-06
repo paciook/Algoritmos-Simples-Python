@@ -1,0 +1,2 @@
+def letras(palabra):
+    pass
