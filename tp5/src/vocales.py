@@ -1,0 +1,2 @@
+def devuelveVocales(palabra):
+    pass
