@@ -28,7 +28,8 @@ def letras(palabra):
             print("Palabra no válida")
             return -1
     
-    # Por último verifico cual es la letra que más se repite
+    # Por último verifico cual es la letra que más se repite, lo indico
+    # en pantalla y lo devuelvo
     
     if cantA > cantE:
         print("A")
@@ -37,6 +38,7 @@ def letras(palabra):
         print("E")
         return "E"
     elif cantA == cantE:
+        print("Misma cantidad de ambas letras: ", cantA)
         return 0
 
 
