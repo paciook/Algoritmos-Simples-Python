@@ -3,6 +3,12 @@ def capiONoCapi(frase1, frase2):
     dependiendo de si la segunda frase es la versión capitalizada
     de la primera"""
 
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase1, str) == False or isinstance(frase2, str) == False:
+        print("Dame un string, papito")
+        return None
+
     # Comparo la frase uno capitalizada con la frase dos y si son iguales
     # lo muestro en pantalla y devuelvo True. En el caso de no serlo,
     # también lo muestro en pantalla y devuelvo False

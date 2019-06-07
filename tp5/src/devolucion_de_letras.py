@@ -1,6 +1,12 @@
 def consonantes(frase):
     """La función recibe una frase, quita las vocales y la devuelve"""
 
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase, str) == False:
+        print("Dame un string, papito")
+        return None
+        
     # Reemplazo las vocales con espacios vacíos
 
     frase = frase.replace('a', "")
@@ -20,6 +26,12 @@ def consonantes(frase):
 
 def vocales(frase):
     """La función recibe una frase, quita las consonantes y la devuelve"""
+
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase, str) == False:
+        print("Dame un string, papito")
+        return None
 
     # Recorro una lista y sólo guardo en otra variable lo que necesite
     
@@ -64,6 +76,13 @@ def vocales(frase):
 def sigVocal(frase):
     """La funcion recibe una frase y devuelve la misma frase pero cada vocal
     reemplazada con su siguiente"""
+
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase, str) == False:
+        print("Dame un string, papito")
+        return None
+
     letras = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
 
     for x in range(5):
@@ -73,11 +92,16 @@ def sigVocal(frase):
     print(frase)
     return frase
 
-sigVocal("muRcIelAgo")
 
 def palindromo(frase):
     """La función recibe una frase y la compara con su reverso, de ser
     iguales devuelve True, y si no, False"""
+
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase, str) == False:
+        print("Dame un string, papito")
+        return None
 
     # Comparo la frase sin espacios y en minúsculas con su reverso
     # y devuelvo los resultados

@@ -27,6 +27,12 @@ def primeraMayuscula(frase):
 def palabrasConA(frase):
     """La función recibe una frase y devuelve todas las palabras empiezan con 'A'"""
     
+    # Me aseguro que sea string por lo menos
+
+    if isinstance(frase1, str) == False or isinstance(frase2, str) == False:
+        print("Dame un string, papito")
+        return None
+
     # Primero instancio una variable con un string vacío
 
     devolucion = ""
