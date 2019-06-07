@@ -5,7 +5,7 @@ def letras(palabra):
     válido, se devuelve '-1', y si la palabra tiene la misma cantidad
     de 'E' que de 'A', devuelve '0'"""
 
-    # Luego seteo los valores iniciales de cada letra
+    # Primero seteo los valores iniciales de cada letra
 
     cantA = 0
     cantE = 0
@@ -18,16 +18,19 @@ def letras(palabra):
     # Luego recorro cada letra de la palabra y sumo una unidad o no,
     # dependiendo del caso. A la vez verifico que los caracteres sean
     # válidos y que sea una sola palabra
-
-    for letra in palabra:
-        if letra == 'a' or letra == 'A':
-            cantA += 1
-        elif letra == 'e' or letra == 'E':
-            cantE += 1
-        elif isinstance(letra, (float, int)) or letra == " ":
-            print("Palabra no válida")
-            return -1
     
+    for letra in palabra:
+        try:
+            if letra == 'a' or letra == 'A':
+                cantA += 1
+            elif letra == 'e' or letra == 'E':
+                cantE += 1
+            elif letra == " " or isinstance(int(letra), int):
+                print("Palabra no válida")
+                return -1
+        except ValueError:
+            pass    
+     
     # Por último verifico cual es la letra que más se repite, lo indico
     # en pantalla y lo devuelvo
     

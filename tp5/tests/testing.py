@@ -18,12 +18,9 @@ class TestAgenda(unittest.TestCase):
 
 class TestCapitalizada(unittest.TestCase):
     def test_capitalizada(self):
-        respuesta = ["USB", "Universal Serial Bus", ""]
-        self.assertEqual(capitalizada.ejercicios("universal\
-                                                  serial bus"), respuesta)
-        self.assertEqual(capitalizada.ejercicios("UNIVERSAL\
-                                                  SERIAL BUS"), respuesta)
-
+        self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "Hola xd"), True)
+        self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "HoLa xd"), False)
+        self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "Xdxdxdx"), False)
         # bitguarden
         # syncthing
 
@@ -49,7 +46,7 @@ class TestPunto2(unittest.TestCase):
         self.assertEqual(punto_2.letras("Venta"), 0)
         self.assertEqual(punto_2.letras("Ver3da"), -1)
         self.assertEqual(punto_2.letras("Hola como estas"), -1)
-        self.assertEqual(punto_2.letras("paciook"), "Hermoso, A")
+        self.assertEqual(punto_2.letras("paciook"), "A")
 
 
 class TestVocales(unittest.TestCase):
@@ -59,7 +56,8 @@ class TestVocales(unittest.TestCase):
                          cantVocales)
         cantVocales = [2, 3, 1, 3, 1]
         self.assertEqual(vocales.devuelveVocales("aeaeieouoo"), cantVocales)
-        pass
+        self.assertEqual(vocales.devuelveVocales("af5dfg"), 0)
+        self.assertEqual(vocales.devuelveVocales("af dfg"), 0)
 
 
 if __name__ == "__main__":
