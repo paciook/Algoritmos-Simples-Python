@@ -27,7 +27,7 @@ def vocales(frase):
     for letra in frase:
         eslower = False
         if letra.islower() == False:
-            letra.lower()
+            letra = letra.lower()
         else:
             eslower == True
 
@@ -62,10 +62,34 @@ def vocales(frase):
     return devolucion
 
 def sigVocal(frase):
-    pass
+    """La funcion recibe una frase y devuelve la misma frase pero cada vocal
+    reemplazada con su siguiente"""
+    letras = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
 
+    for x in range(5):
+        frase = frase.replace(letras[x], letras[x+2])
+        frase = frase.replace(letras[8], letras[0])
+        frase = frase.replace(letras[9], letras[1])
+    print(frase)
+    return frase
+
+sigVocal("muRcIelAgo")
 
 def palindromo(frase):
-    pass
+    """La función recibe una frase y la compara con su reverso, de ser
+    iguales devuelve True, y si no, False"""
 
-vocales("PAnchO cApO")
+    # Comparo la frase sin espacios y en minúsculas con su reverso
+    # y devuelvo los resultados
+
+    frase = frase.replace(' ', '')
+    frase = frase.lower()
+
+    if frase[::-1] == frase:
+        print("Es palíndromo")
+        return True
+    else:
+        print("No es palíndromo")
+        return False
+    
+
