@@ -48,6 +48,7 @@ class TestPunto2(unittest.TestCase):
         self.assertEqual(punto_2.letras("Venenosa"), "E")
         self.assertEqual(punto_2.letras("Venta"), 0)
         self.assertEqual(punto_2.letras("Ver3da"), -1)
+        self.assertEqual(punto_2.letras("Hola como estas"), -1)
         self.assertEqual(punto_2.letras("paciook"), "Hermoso, A")
 
 
