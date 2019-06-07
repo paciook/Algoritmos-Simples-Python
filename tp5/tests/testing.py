@@ -21,8 +21,7 @@ class TestCapitalizada(unittest.TestCase):
         self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "Hola xd"), True)
         self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "HoLa xd"), False)
         self.assertEqual(capitalizada.capiONoCapi("HOLA XD", "Xdxdxdx"), False)
-        # bitguarden
-        # syncthing
+
 
 
 class TestContraseña(unittest.TestCase):
