@@ -29,7 +29,7 @@ def palabrasConA(frase):
     
     # Me aseguro que sea string por lo menos
 
-    if isinstance(frase1, str) == False or isinstance(frase2, str) == False:
+    if !isinstance(frase, str):
         print("Dame un string, papito")
         return None
 
@@ -40,6 +40,7 @@ def palabrasConA(frase):
     # Recorro cada palabra verificando su primer letra y guardo las que necesito
 
     frase = frase.split(" ")
+    
     for palabra in frase:
         if palabra[0] == 'a' or palabra[0] == 'A':
             devolucion += palabra + ' '
